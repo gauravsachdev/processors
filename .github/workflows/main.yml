@@ -38,7 +38,7 @@ jobs:
           touch processors-list.rst
           echo ".. toctree::">> processors-list.rst
           echo -e "   :maxdepth: 2">> processors-list.rst
-          echo -e "\n"
+          echo -e "\n">> processors-list.rst
           while read line; do echo '   '$line>> processors-list.rst; done < ./../processors_list.txt
           rm ./../processors_list.txt
       - name: Pushes to another repository
